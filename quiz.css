@@ -58,9 +58,9 @@ h3 {
     font-size: 40px;
 }
 
-h4 {
-    position: fixed; left:3%; bottom: 0%;
-    font-size: 35px;
+#all {
+    padding-left: 30px;
+    font-size: 25px;
     font-family: 'Geostar', cursive;
 }
 
