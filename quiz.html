@@ -4,35 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>QUIZ</title>   
+    <title>QUIZ</title>
     <link href="quiz.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="marubatu.ico">
     <link href="https://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Geostar" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Geostar" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
 </head>
-<body>    
+<body>
+    <header>
+        <div id="header-main">
+            <h1>fastest finger first</h1>
+            <div id="all"></div>
+        </div>
+        <div id="header-border"></div>
+    </header>
+    <main>
+        <a id="element">問題</a>
+        <h2><span id="question"></span><span id="qanswer"></span></h2>
+        <h3><div id="answer"></div></h3>
 
-    <h1>fastest finger first<span id="all"></span></h1>  
-    <a id="element">問題</a>
-    <h2><span id="question"></span><span id="qanswer"></span></h2>
-    <h3><div id="answer"></div></h3>
-   
-    <h5><div id="time"></div></h5>
-    <p>F. F. F. hayato.quiz</p>
-    <script src="question.js"></script>
-    <script src="quiz.js"></script>
-  
- 
-    
+        <h5><div id="time"></div></h5>
+    </main>
+    <footer>
+        F. F. F. hayato.quiz
+    </footer>
+
     <audio id="sound" preload="auto">
         <source src="button57.wav" type="audio/wav">
     </audio>
     <audio id="sound1" preload="auto">
         <source src="decision1.wav" type="audio/wav">
     </audio>
-
+    <script src="question.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>
 
