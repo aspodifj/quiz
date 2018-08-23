@@ -16,6 +16,7 @@ let random = Math.floor(Math.random() * 　a.length);
 let qes = a[random].question;
 let ans = a[random].answer;
 let chars = qes.split("");
+let number = a.indexOf(ans);
 
 let count = 0;
 let timeoutid = null;
@@ -23,7 +24,8 @@ let isRunning = false;
 let index;
 
 function tick() {
-    question.textContent += chars[index];
+    question.textContent +=chars[index];
+   // question.textContent += chars[index];
     if (index < chars.length - 1) {
         timeoutid = setTimeout(tick, 130);
     } else {
@@ -46,7 +48,6 @@ element.addEventListener("click", function () {
     } else if (count === 3) {
         answer.textContent = "A. " + ans;
         element.textContent = "次へ"
-        //qanswer.textContent = qes.substring(timeoutid);
         qanswer.textContent = qes.substring(index);
     } else if (count === 4) {
         element.textContent = "問題"
