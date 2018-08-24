@@ -25,7 +25,6 @@ let index;
 
 function tick() {
     question.textContent +=chars[index];
-   // question.textContent += chars[index];
     if (index < chars.length - 1) {
         timeoutid = setTimeout(tick, 130);
     } else {
@@ -37,7 +36,9 @@ function tick() {
 
 element.addEventListener("click", function () {
     count++;
-    if (count === 1) {
+    if (count === 1) {  
+        question.textContent = random + 1 + "." ;
+
         index = 0;
         tick();
         ring();
