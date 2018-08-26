@@ -83,6 +83,13 @@ h3 {
     font-size: 4vh;
 }
 
+#shu{
+    position: absolute;
+    left: 2vw;
+    bottom: 0;    
+    font-size: 1vh;
+}
+
 footer {
     color:lightslategray;
     font-family: 'Questrial', sans-serif;
