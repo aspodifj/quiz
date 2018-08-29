@@ -84,19 +84,84 @@ h3 {
 }
 
 #shu{
-    position: absolute;
-    left: 2vw;
-    bottom: 0;    
-    font-size: 1vh;
+    flex: 1;
+    font-size: 1vw;
+    margin: 0%
 }
 
 footer {
+    align-items: baseline;    
+    display: flex;
     color:lightslategray;
     font-family: 'Questrial', sans-serif;
-    text-align: right;
     margin: 10px 10px;
 }
 
 footer .shundroid {
     font-size: 0.5vh;
 }
+
+
+
+
+
+
+
+
+/* .menu {
+    position: absolute;
+	right: 1vw;
+    max-width: 90px;
+    margin:  auto;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    line-height: 1;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 1px 0;
+    padding :14px;
+    line-height: 0;
+    color :#fff;
+    background :#d36969;
+    cursor :pointer;
+}
+
+input {
+    display: none;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    background :#f4f4f4;
+    list-style: none;
+}
+
+.menu li {
+    max-height: 0;
+    overflow-y: hidden;
+    /* -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s; */
+
+    /* transition: all 0.5s;
+}
+
+#menu_bar01:checked ~ #links01 li,
+#menu_bar02:checked ~ #links02 li {
+    max-height: 46px;
+    opacity: 1;
+}
+
+#order {
+    cursor: pointer;
+}  */
