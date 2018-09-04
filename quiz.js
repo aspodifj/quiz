@@ -3,6 +3,7 @@ const question = document.getElementById("question");
 const answer = document.getElementById("answer");
 const element = document.getElementById("element");
 const sound = document.getElementById("sound");
+const sra = document.getElementById("sra");
 function ring() {
     document.getElementById("sound").play();
 }
@@ -38,7 +39,6 @@ element.addEventListener("click", function () {
     count++;
     if (count === 1) {  
         question.textContent = random + 1 + "." ;
-
         index = 0;
         tick();
         ring();
@@ -47,10 +47,12 @@ element.addEventListener("click", function () {
         clearTimeout(timeoutid);
         element.textContent = "答え"
     } else if (count === 3) {
+        sra.textContent = "/"  //ここね
         answer.textContent = "A. " + ans;
         element.textContent = "次へ"
-        qanswer.textContent = qes.substring(index);
+        qanswer.textContent =qes.substring(index);
     } else if (count === 4) {
+        sra.textContent = ""
         element.textContent = "問題"
         question.textContent = ""
         qanswer.textContent = ""

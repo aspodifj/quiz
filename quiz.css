@@ -75,6 +75,10 @@ main {
     padding-right: 0.3em;
 }
 
+#sra {
+    color: #ff7777;
+}
+
 h2 {
     font-size: 5vh;
 }
