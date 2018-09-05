@@ -21,14 +21,15 @@ let number = a.indexOf(ans);
 
 let count = 0;
 let timeoutid = null;
-let isRunning = false;
 let index;
+let isReading = false;
 
 function tick() {
     question.textContent +=chars[index];
     if (index < chars.length - 1) {
         timeoutid = setTimeout(tick, 130);
     } else {
+	isReading = false;
         count = 2;
         element.textContent = "答え"
     }
@@ -37,21 +38,28 @@ function tick() {
 
 element.addEventListener("click", function () {
     count++;
-    if (count === 1) {  
+    switch (count) {
+      case 1:
         question.textContent = random + 1 + "." ;
         index = 0;
+	isReading = true;
         tick();
         ring();
-    } else if (count === 2) {
+	break;
+      case 2:
         ring1();
         clearTimeout(timeoutid);
         element.textContent = "答え"
-    } else if (count === 3) {
-        sra.textContent = "/"  //ここね
+	break;
+      case 3:
+	if (isReading) {
+          sra.textContent = "/"  //ここね
+	}
         answer.textContent = "A. " + ans;
         element.textContent = "次へ"
         qanswer.textContent =qes.substring(index);
-    } else if (count === 4) {
+	break;
+      case 4:
         sra.textContent = ""
         element.textContent = "問題"
         question.textContent = ""
@@ -62,6 +70,7 @@ element.addEventListener("click", function () {
         ans = a[random].answer;
         chars = qes.split("");
         count = 0;
+        break;
     }
 });
 
@@ -74,3 +83,4 @@ element.addEventListener("click", function () {
 // order.addEventListener("click",function(){
 //     colorchange();
 // });
+
