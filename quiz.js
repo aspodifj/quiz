@@ -25,11 +25,14 @@ let count = 0;
 let timeoutid = null;
 let index;
 let isReading = false;
+<<<<<<< HEAD
 let isAnswering = false;
 let isClicked = false;
 const EXTRA_COUNT = 2;
 let currentExtra;
 let currentIndex;
+=======
+>>>>>>> 34f3cb4b1cce6011b9eeca70b8af9b213ab237ec
 
 function tick() {
     if (!isClicked && index <= chars.length - 1) {
@@ -37,10 +40,16 @@ function tick() {
         question.textContent +=chars[index];
     } else if (isClicked && currentIndex <= currentExtra){
         timeoutid = setTimeout(tick, 130);
+<<<<<<< HEAD
         currentIndex++;
         One.textContent +=chars[index];
     } else if(!isClicked) {
         count = 3;
+=======
+    } else {
+	isReading = false;
+        count = 2;
+>>>>>>> 34f3cb4b1cce6011b9eeca70b8af9b213ab237ec
         element.textContent = "答え"
         isReading = false;
         isAnswering = false;
@@ -52,14 +61,21 @@ function tick() {
 
 element.addEventListener("click", function () {
     count++;
+<<<<<<< HEAD
     if (count === 1) {  
         isReading = true;
         isAnswering = true;
+=======
+    switch (count) {
+      case 1:
+>>>>>>> 34f3cb4b1cce6011b9eeca70b8af9b213ab237ec
         question.textContent = random + 1 + "." ;
         isClicked = false;
         index = 0;
+	isReading = true;
         tick();
         ring();
+<<<<<<< HEAD
     } else if (count === 2) {
         currentExtra = Math.floor(Math.random()*(EXTRA_COUNT + 1));
         console.log(currentExtra);
@@ -81,6 +97,23 @@ element.addEventListener("click", function () {
         qanswer.textContent = qes.substring(index - 1);
     } else if (count === 5) {
         One.textContent = ""
+=======
+	break;
+      case 2:
+        ring1();
+        clearTimeout(timeoutid);
+        element.textContent = "答え"
+	break;
+      case 3:
+	if (isReading) {
+          sra.textContent = "/"  //ここね
+	}
+        answer.textContent = "A. " + ans;
+        element.textContent = "次へ"
+        qanswer.textContent =qes.substring(index);
+	break;
+      case 4:
+>>>>>>> 34f3cb4b1cce6011b9eeca70b8af9b213ab237ec
         sra.textContent = ""
         kac.textContent = ""
         element.textContent = "問題"
@@ -92,6 +125,7 @@ element.addEventListener("click", function () {
         ans = a[random].answer;
         chars = qes.split("");
         count = 0;
+        break;
     }
     
 });
@@ -99,13 +133,3 @@ element.addEventListener("click", function () {
 
 
 
-// function colorchange() {
-//     document.body.style.backgroundColor="#808080";
-    
-
-// };
-
-
-// order.addEventListener("click",function(){
-//     colorchange();
-// });
