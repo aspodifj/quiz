@@ -96,16 +96,4 @@ element.addEventListener("click", function () {
     
 });
 
-
-
-
-// function colorchange() {
-//     document.body.style.backgroundColor="#808080";
-    
-
-// };
-
-
-// order.addEventListener("click",function(){
-//     colorchange();
-// });
+//alert("ライン打ってね");
