@@ -5,6 +5,11 @@ const element = document.getElementById("element");
 const sound = document.getElementById("sound");
 const sra = document.getElementById("sra");
 const One = document.getElementById("One");
+const square_btn = document.getElementById("square_btn");
+const square_btn35 = document.getElementById("square_btn35");
+const dss = document.getElementById("dss");
+
+
 
 function ring() {
     document.getElementById("sound").play();
@@ -31,6 +36,7 @@ const EXTRA_COUNT = 2;
 let currentExtra;
 let currentIndex;
 
+
 function tick() {
     if (!isClicked && index <= chars.length - 1) {
         timeoutid = setTimeout(tick, 130);   
@@ -52,10 +58,12 @@ function tick() {
 
 element.addEventListener("click", function () {
     count++;
+
+
     if (count === 1) {  
         isReading = true;
         isAnswering = true;
-        question.textContent = random + 1 + "." ;
+        dss.textContent = random + 1 + ":"  ;
         isClicked = false;
         index = 0;
         tick();
@@ -72,7 +80,6 @@ element.addEventListener("click", function () {
         element.textContent = "答え"
 
     } else if (count === 4) { 
-        //sra.textContent = "/"
         if (isReading){
         kac.textContent = ")"
         }
@@ -85,6 +92,7 @@ element.addEventListener("click", function () {
         kac.textContent = ""
         element.textContent = "問題"
         question.textContent = ""
+        dss.textContent = ""
         qanswer.textContent = ""
         answer.textContent = ""
         random = Math.floor(Math.random() * 　a.length);
@@ -95,5 +103,15 @@ element.addEventListener("click", function () {
     }
     
 });
+document.getElementById("dss").style.display ="none";
 
-//alert("ライン打ってね");
+square_btn35.addEventListener("click",function(){
+    const dss = document.getElementById("dss");
+    if(dss.style.display==="block"){
+        dss.style.display="none";
+    }else{
+        dss.style.display="block";
+    }
+});
+
+

@@ -35,6 +35,44 @@ header h1 {
     background: linear-gradient(to right, rgb(230, 90, 90), transparent);
 }
 
+#square_btn35{
+    font-family: "Sawarabi Mincho";
+    display: inline-block;
+    position: relative;
+    top: 3vmax;
+    float: right;
+    cursor: pointer;
+    padding: 0em 1em;
+    text-decoration: none;
+    color: #000;
+    transition: .4s;
+}
+#square_btn35:hover {
+    color:#ff7f7f;
+}
+#square_btn35:before,.square_btn35:after{
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 5px;
+  height: 80%;
+  display: inline-block;
+}
+
+#square_btn35:before{
+  border-left: solid 1px #ff7f7f;
+  border-top: solid 1px #ff7f7f;
+  border-bottom: solid 1px #ff7f7f;
+  left: 0;
+}
+    /* #square_btn35:after{
+        content: '';
+    border-top: solid 1px #ff7f7f;
+    border-right: solid 1px #ff7f7f;
+    border-bottom: solid 1px #ff7f7f;
+    right: 0;
+    } */
+
 #all {
     padding-left: 30px;
     font-size: 4vh;
@@ -114,67 +152,20 @@ footer .shundroid {
     font-size: 0.5vh;
 }
 
-
-
-
-
-
-
-
-/* .menu {
-    position: absolute;
-	right: 1vw;
-    max-width: 90px;
-    margin:  auto;
-    padding: 0;
-}
-
-.menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #000;
-    line-height: 1;
-}
-
-label {
+#square_btn{
     display: inline-block;
-    margin: 0 0 1px 0;
-    padding :14px;
-    line-height: 0;
-    color :#fff;
-    background :#d36969;
-    cursor :pointer;
+    padding: 3px 10px;
+    border-radius: 25px;
+    position: absolute;
+    right: 1vh;
+    text-decoration: none;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(45deg, #ff7777 0%, #ff8b5f 100%);
+    background-image: linear-gradient(45deg, #ff7777 0%, #ff8b5f 100%);
+    transition: .4s;
 }
 
-input {
-    display: none;
+#square_btn:hover {
+    background-image: -webkit-linear-gradient(45deg, #ff7777 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #ff7777 0%, #f76a35 100%);
 }
-
-.menu ul {
-    margin: 0;
-    padding: 0;
-    background :#f4f4f4;
-    list-style: none;
-}
-
-.menu li {
-    max-height: 0;
-    overflow-y: hidden;
-    /* -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s; */
-
-    /* transition: all 0.5s;
-}
-
-#menu_bar01:checked ~ #links01 li,
-#menu_bar02:checked ~ #links02 li {
-    max-height: 46px;
-    opacity: 1;
-}
-
-#order {
-    cursor: pointer;
-}  */
