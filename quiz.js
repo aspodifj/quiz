@@ -3,6 +3,7 @@ const question = document.getElementById("question");
 const answer = document.getElementById("answer");
 const element = document.getElementById("element");
 const sound = document.getElementById("sound");
+const sound1 = document.getElementById("sound1");
 const sra = document.getElementById("sra");
 const One = document.getElementById("One");
 const square_btn = document.getElementById("square_btn");
@@ -14,9 +15,11 @@ const dss = document.getElementById("dss");
 function ring() {
     document.getElementById("sound").play();
 }
+
 function ring1() {
     document.getElementById("sound1").play();
 }
+
 all.textContent = "all question: " + a.length;
 
 
@@ -69,13 +72,15 @@ element.addEventListener("click", function () {
         tick();
         ring();
     } else if (count === 2) {
-        currentExtra = Math.floor(Math.random()*(EXTRA_COUNT + 1));
+        currentExtra = Math.floor(Math.random()*(EXTRA_COUNT));
         console.log(currentExtra);
         currentIndex = 0;      
         isClicked = true;
         sra.textContent = "/"
+        ring1();
+
     } else if (count === 3) {
-        ring1(); 
+
         clearTimeout(timeoutid);
         element.textContent = "答え"
 
